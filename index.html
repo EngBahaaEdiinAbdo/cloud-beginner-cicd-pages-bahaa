@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud CI/CD Beginner Assignment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="topbar">
+        <span class="badge">CI/CD Demo</span>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">🌓</button>
+      </div>
+
+      <h1>My Cloud CI/CD Site</h1>
+      <p><b>Name:</b> <span id="studentName">Bahaa</span></p>
+      <p><b>Course:</b> Cloud Computing</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="auth">
+      <div class="auth-left">
+        <h2 id="modeTitle">Sign In</h2>
+        <div class="social">
+          <span title="Google">G</span>
+          <span title="Facebook">f</span>
+          <span title="LinkedIn">in</span>
+        </div>
+
+        <p class="muted">This is a static UI demo (no real authentication).</p>
+
+        <label>Email</label>
+        <input type="email" placeholder="bahaa@example.com" />
+
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" />
+
+        <div class="row">
+          <a class="link" href="#" onclick="return false;">Forgot your password?</a>
+        </div>
+
+        <button id="primaryBtn" class="btn">SIGN IN</button>
+      </div>
+
+      <div class="auth-right">
+        <h2 id="rightTitle">Hello, Friend!</h2>
+        <p id="rightText">Toggle the mode to simulate a simple UI interaction using JavaScript.</p>
+        <button id="toggleMode" class="btn ghost">SIGN UP</button>
+
+        <p id="statusMsg" class="status"></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What is CI/CD?</h2>
+      <p>
+        CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).<br>
+        CI automatically checks code changes when developers push commits.<br>
+        It can run validations/tests to catch issues early and keep the project stable.<br>
+        CD then deploys the approved version automatically to the target environment.<br>
+        This reduces manual work and makes releases faster and more reliable.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>My Pipeline</h2>
+      <p>
+        After I push to the <code>main</code> branch, GitHub Actions starts a workflow run.<br>
+        It checks required files, uploads the site artifact, then deploys to GitHub Pages.<br>
+        When the workflow succeeds, the live website updates automatically.
+      </p>
+    </section>
+
+    <footer class="foot">
+      Deployed automatically with GitHub Actions → GitHub Pages ✅
+      <div class="subfoot">© <span id="year"></span> Bahaa</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
